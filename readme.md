@@ -83,3 +83,19 @@ View the application at http://localhost:3000
 
 Thanks to [Tony Quinn](https://github.com/tonyq) for contributing the initial Node.js/MongoDB code!
 
+
+
+***
+备忘：
+mongdb数据加载方法
+- 先到mongodb的文件夹中的bin文件夹
+- 新建个文件“链接customermanager.cmd”，双击，内容如下 连接到要放数据的地方
+      mongod --dbpath "e:\wang\Angularjs\CustomerManager-master\CustomerManager\server"
+- 到项目的server文件夹中，有个“initMongoDB.bat”，内容如下
+      @ECHO off
+      e:\wang\mongodb\bin\mongo.exe %CD%\initMongoData.js
+      ECHO -
+      ECHO Your data is loaded
+      pause
+- 见证奇迹的时刻到了，打开MongoVUE.exe（一个看mongodb数据的软件）,连接上localhost之后，里面有个数据库就叫custormanager了，页面也有数据显示咯~~~
+
